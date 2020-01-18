@@ -16,18 +16,15 @@ public class Board {
         Random random = new Random();
         for (int i = 0; i < width; i++) {
             for (int j = 0; j < height; j++) {
-                int x;
-                x = random.nextInt(3);
-                switch (x) {
-                    case 0:
-                        board[i][j] = OFF;
-                        break;
-                    case 1:
-                        board[i][j] = DYING;
-                        break;
-                    case 2:
-                        board[i][j] = ON;
-                        break;
+                board[i][j] = OFF;
+            }
+        }
+
+        for (int i = 0; i < width; i++) {
+            for (int j = 0; j < height; j++) {
+                int x = random.nextInt(10);
+                if(x == 1) {
+                    board[i][j] = ON;
                 }
             }
         }
@@ -59,8 +56,8 @@ public class Board {
 
     private boolean neighboursOn(int x, int y) {
         int count = 0;
-        for (int i = (x - 1); i < (x + 1); i++) {
-            for (int j = (y - 1); j < (y + 1); j++) {
+        for (int i = (x - 1); i <= (x + 1); i++) {
+            for (int j = (y - 1); j <= (y + 1); j++) {
                 if(i < 0 || j < 0 || i >= width || j >= height) {
                     continue;
                 } else if (board[i][j] == ON) {

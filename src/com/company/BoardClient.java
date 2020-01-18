@@ -2,7 +2,7 @@ package com.company;
 
 public class BoardClient {
     private Board board;
-    private final double fps = 7.0;
+    private final double fps = 10.0;
     private final double ns = 1000000000.0 / fps;
     private double delta = 0;
     private double lastTime = System.nanoTime();

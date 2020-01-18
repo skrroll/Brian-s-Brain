@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         int width = 100;
         int height = 100;
-        int node_size = 2;
+        int node_size = 4;
         JFrame window = new JFrame("Brian's Brain");
         Board board = new Board(width, height);
         GameView gameView = new GameView(board, node_size);
