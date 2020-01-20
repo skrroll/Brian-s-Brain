@@ -24,15 +24,15 @@ public class GameView {
                         switch(board.getCell(i, j)) {
                             case ON:
                                 g.setColor(Color.BLUE);
-                                g.fillRect(i * node_size, j * node_size,(i * node_size) + 1, (j * node_size) + 1);
+                                g.fillRect(i * node_size, j * node_size,(i * node_size) + node_size - 1, (j * node_size) + node_size - 1);
                                 break;
                             case DYING:
                                 g.setColor(Color.WHITE);
-                                g.fillRect(i * node_size, j * node_size,(i * node_size) + 1, (j * node_size) + 1);
+                                g.fillRect(i * node_size, j * node_size,(i * node_size) + node_size - 1, (j * node_size) + node_size - 1);
                                 break;
                             case OFF:
                                 g.setColor(Color.BLACK);
-                                g.fillRect(i * node_size, j * node_size,(i * node_size) + 1, (j * node_size) + 1);
+                                g.fillRect(i * node_size, j * node_size,(i * node_size) + node_size - 1, (j * node_size) + node_size - 1);
                                 break;
                         }
                     }
